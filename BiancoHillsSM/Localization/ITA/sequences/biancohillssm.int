@@ -1,15 +1,15 @@
 [conductor]
-conductor0 = Perche ciao ragazza, penso di spiare uno di quei mostri di cose in cima a quel mulino a vento.
-conductor1 = Cosa vuoi dire? Ho scalato piu grande? Bene, allora sii P E C K N E C K!
+conductor0 = Ehilà ragazza, credo di vedere uno di quei tuoi [timepiece]affari[/timepiece] su quel mulino a vento.
+conductor1 = Come dici? [wait]Ho scalato di meglio? [wait] allora vai a prendertelo [waitlong] C I T R U L L A !
 [cat]
-cat0 = Bel lavoro, non ho bisogno del mio biglietto della metropolitana qui. L'ho perso l'altro giorno ...
+cat0 = Ottimo quì non mi servirà il biglietto della metro. l'ho perso qualche giorno fa...
 [mafia]
-mafia0 = La mafia ama il sole caldo e l'acqua. Guarda, questo posto ha anche degli uccelli per la mafia da dare un pugno!
+mafia0 = A mafia piace acqua e sole di posto. guarda, ci sono anche uccelli così mafia da pugni!
 [seal]
-seal0 = Ciao signorina! Benvenuto a Bianco Hills!
+seal0 = Salve signorina! benvenuta a Colli Ariosi!
 [cookingcat]
-cookingcat0 = Sono di nuovo io, Cooking Cat. E bello prendersi una pausa dal salvare gli estranei dalla cucina della mafia.
-cookingcat1 = Che cosa stai chiedendo? Perche sono su un tetto?
+cookingcat0 = Ehi sono io, Cooking Cat. E bello riposarsi dopo aver salvato qualcuno dalla pessima cucina della Mafia.
+cookingcat1 = Come? perchè sono su un tetto?
 [grooves]
-grooves0 = Cara! Sei venuto anche qui per il sole?
-grooves1 = Anche una star come te deve fare una pausa ogni tanto!
+grooves0 = Tesoro! [wait]Anche tu quì per il sole? 
+grooves1 = anche una celebrità come te deve staccare di tanto in tanto!

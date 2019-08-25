@@ -8,24 +8,22 @@ import os
 from googletrans import Translator
 translator = Translator()
 
-translationTable = str.maketrans("éàèùâêîôûç", "eaeuaeiouc")
-
 
 def getListOfFiles(dirName):
-    # create a list of file and sub directories 
-    # names in the given directory 
+    # create a list of file and sub directories
+    # names in the given directory
     listOfFile = os.listdir(dirName)
     allFiles = list()
     # Iterate over all the entries
     for entry in listOfFile:
         # Create full path
         fullPath = os.path.join(dirName, entry)
-        # If entry is a directory then get the list of files in this directory 
+        # If entry is a directory then get the list of files in this directory
         if os.path.isdir(fullPath):
             allFiles = allFiles + getListOfFiles(fullPath)
         else:
             allFiles.append(fullPath)
-                
+
     return allFiles
 
 
@@ -70,7 +68,10 @@ def get_translation(value, code):
     out = ''
     for char in string:
         out += get_ascii_char(char)
-    return out 
+    return out
+
+def getTranslationKey(key, value, code):
+    return key + '= ' + get_translation(value, code) + '\n'
 
 
 def remove_text_inside_brackets(text, brackets="()[]"):
@@ -98,11 +99,12 @@ esn = ''
 fra = ''
 ita = ''
 eng = ''
+ptb = ''
 
 for file in files:
     tokens = fileToTokens(file)
     print(file)
-    
+
     for token in tokens:
 
         if token[0] != '[':
@@ -111,20 +113,22 @@ for file in files:
             print("Translating: " + value)
 
             # Translate value into deu esn fra ita
-            deu += varname + '= ' + get_translation(value, 'de') + '\n'
-            esn += varname + '= ' + get_translation(value, 'es') +'\n'
-            fra += varname + '= ' + get_translation(value, 'fr') +'\n'
-            ita += varname + '= ' + get_translation(value, 'it') +'\n'
+            deu += getTranslationKey(varname, value, 'de')
+            esn += getTranslationKey(varname, value, 'es')
+            fra += getTranslationKey(varname, value, 'fr')
+            ita += getTranslationKey(varname, value, 'it')
+            ptb += getTranslationKey(varname, value, 'pt')
 
             eng += varname + ' = ' + value
         else:
-            deu += token 
+            deu += token
             esn += token
             fra += token
             ita += token
+            ptb += token
 
             eng += token
-            
+
 
     print("Writing output")
     stringToFile(file.replace("INT", "DEU", 1), deu)
@@ -132,7 +136,9 @@ for file in files:
     stringToFile(file.replace("INT", "FRA", 1), fra)
     stringToFile(file.replace("INT", "ITA", 1), ita)
     stringToFile(file.replace("INT", "ENG", 1), eng)
-    
+    stringToFile(file.replace("INT", "PTB", 1), ptb)
 
 
-        
+
+
+
