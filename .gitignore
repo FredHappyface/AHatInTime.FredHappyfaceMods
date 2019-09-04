@@ -1,1 +1,12 @@
 CookedPC
+Shadercache
+SteamWorkshop.ini
+# Restricted Licence
+PillowFortP*
+Playground
+# Not ready/ planned
+sm64
+MushroomBridge
+# Py files in mod dirs
+ChangeFileEndings.py
+!TOOLS
